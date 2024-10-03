@@ -1,0 +1,7 @@
+docker-compose-yaml: docker-compose.yml
+
+project: testbed
+
+routes:
+  autogenerate:
+    insecure: Redirect
