@@ -26,6 +26,10 @@ services:
     labels:
       lagoon.type: nginx-php
       # lagoon.persistent: /app/web/sites/default/files/ # define where the persistent storage should be mounted too
+      lagoon.resources.requests.cpu: 20m
+      lagoon.resources.limits.cpu: 200m
+      lagoon.resources.requests.memory: 200Mi
+      lagoon.resources.limits.memory: 1Gi
     <<: [*default-volumes, *default-user]
     environment:
       <<: *default-environment # loads the defined environment variables from the top
@@ -37,6 +41,11 @@ services:
       lagoon.type: nginx-php
       lagoon.name: nginx # we want this service be part of the nginx pod in Lagoon
       # lagoon.persistent: /app/web/sites/default/files/ # define where the persistent storage should be mounted too
+      lagoon.resources.requests.cpu: 50m
+      lagoon.resources.limits.cpu: 1
+      lagoon.resources.requests.memory: 300Mi
+      lagoon.resources.limits.memory: 2Gi
+
     <<: [*default-volumes, *default-user]
     environment:
       <<: *default-environment # loads the defined environment variables from the top
