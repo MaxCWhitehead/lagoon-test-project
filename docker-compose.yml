@@ -34,6 +34,10 @@ services:
       lagoon.resources.override-branch.main.limits.cpu: 201m
       lagoon.resources.override-branch.main.requests.memory: 201Mi
       lagoon.resources.override-branch.main.limits.memory: 1001Mi
+      lagoon.resources.override-branch.test1.requests.cpu: 22m
+      lagoon.resources.override-branch.test1.limits.cpu: 202m
+      lagoon.resources.override-branch.test1.requests.memory: 202Mi
+      lagoon.resources.override-branch.test1.limits.memory: 1002Mi
     <<: [*default-volumes, *default-user]
     environment:
       <<: *default-environment # loads the defined environment variables from the top
@@ -53,6 +57,10 @@ services:
       lagoon.resources.override-branch.main.limits.cpu: 1.01
       lagoon.resources.override-branch.main.requests.memory: 301Mi
       lagoon.resources.override-branch.main.limits.memory: 2001Mi
+      lagoon.resources.override-branch.test1.requests.cpu: 52m
+      lagoon.resources.override-branch.test1.limits.cpu: 1.02
+      lagoon.resources.override-branch.test1.requests.memory: 302Mi
+      lagoon.resources.override-branch.test1.limits.memory: 2002Mi
 
     <<: [*default-volumes, *default-user]
     environment:
