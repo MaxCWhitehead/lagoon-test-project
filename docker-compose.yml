@@ -51,16 +51,12 @@ services:
       # lagoon.persistent: /app/web/sites/default/files/ # define where the persistent storage should be mounted too
       lagoon.resources.requests.cpu: 50m
       lagoon.resources.limits.cpu: 1
-      lagoon.resources.requests.memory: 300Mi
-      lagoon.resources.limits.memory: 2Gi
       lagoon.resources.override-branch.main.requests.cpu: 51m
       lagoon.resources.override-branch.main.limits.cpu: 1.01
       lagoon.resources.override-branch.main.requests.memory: 301Mi
       lagoon.resources.override-branch.main.limits.memory: 2001Mi
       lagoon.resources.override-branch.test1.requests.cpu: 52m
       lagoon.resources.override-branch.test1.limits.cpu: 1.02
-      lagoon.resources.override-branch.test1.requests.memory: 302Mi
-      lagoon.resources.override-branch.test1.limits.memory: 2002Mi
 
     <<: [*default-volumes, *default-user]
     environment:
